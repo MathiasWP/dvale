@@ -1,12 +1,9 @@
-node_modules/
-dist/
 build/
-.svelte-kit/
-.next/
-out/
-target/
+.origo/
 *.log
 .DS_Store
+.build/
+.swiftpm/
 .env
 .env.*
 !.env.example
