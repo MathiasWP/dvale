@@ -3,7 +3,7 @@ import AppKit
 let arguments = Array(CommandLine.arguments.dropFirst())
 if arguments == ["--shortcut-status"] {
     guard let report = ShortcutDiagnostics.queryRunningApp() else {
-        fputs("No response from StillBar. Open the updated app from Applications first.\n", stderr)
+        fputs("No response from dvale. Open the updated app from Applications first.\n", stderr)
         exit(1)
     }
     print(report)
@@ -42,7 +42,7 @@ let delegate = AppDelegate()
 if arguments.count == 2 && arguments[0] == "--snapshot" {
     delegate.snapshotPath = arguments[1]
 } else if !arguments.isEmpty {
-    fputs("Usage: StillBar [--diagnose | --probe | --shortcut-status | --snapshot path.png]\n", stderr)
+    fputs("Usage: dvale [--diagnose | --probe | --shortcut-status | --snapshot path.png]\n", stderr)
     exit(64)
 }
 let app = NSApplication.shared

@@ -1,4 +1,4 @@
-StillBar's private API integration was informed by these MIT-licensed projects:
+dvale's private API integration was informed by these MIT-licensed projects:
 
 TouchBarOff — https://github.com/gbili/touchbar-off
 Copyright (c) 2026 Guillermo Pages

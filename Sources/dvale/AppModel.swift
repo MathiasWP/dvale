@@ -1,7 +1,7 @@
 import AppKit
 import SwiftUI
 import ServiceManagement
-import StillBarCore
+import DvaleCore
 
 final class AppModel: ObservableObject {
     @Published private(set) var keepOff = false
@@ -94,7 +94,7 @@ final class AppModel: ObservableObject {
         } else {
             UserDefaults.standard.set(false, forKey: "keepOff")
             if display.request(on: true) { ownsOffRequest = false }
-            else { error = "macOS refused the on request. Use Turn On again, or quit StillBar to retry restoration." }
+            else { error = "macOS refused the on request. Use Turn On again, or quit dvale to retry restoration." }
         }
         refresh()
     }
@@ -107,7 +107,7 @@ final class AppModel: ObservableObject {
             ownsOffRequest = true
             error = nil
         } else {
-            error = "macOS refused an off request. StillBar will retry while Keep Off is enabled."
+            error = "macOS refused an off request. dvale will retry while Keep Off is enabled."
         }
     }
 
@@ -146,7 +146,7 @@ final class AppModel: ObservableObject {
             shortcutMessage = "Paused by secure keyboard input · leave password fields to retry"
         } else if !shortcutActive {
             shortcutMessage = keyboard.permissionGranted
-                ? "Permission is allowed, but the listener could not start · relaunch StillBar"
+                ? "Permission is allowed, but the listener could not start · relaunch dvale"
                 : "Allow Input Monitoring to enable the shortcut"
         } else if keyboard.commandEvents > 0 {
             shortcutMessage = "Command received · \(keyboard.toggles) double-taps detected"

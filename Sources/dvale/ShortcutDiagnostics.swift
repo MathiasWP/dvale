@@ -3,8 +3,8 @@ import Foundation
 /// Ask the GUI process, whose privacy permissions can differ from a shell's.
 /// Reports aggregate Command counts only; no typed keys, text or applications.
 enum ShortcutDiagnostics {
-    static let request = Notification.Name("local.stillbar.shortcutDiagnostics.request")
-    static let response = Notification.Name("local.stillbar.shortcutDiagnostics.response")
+    static let request = Notification.Name("local.dvale.shortcutDiagnostics.request")
+    static let response = Notification.Name("local.dvale.shortcutDiagnostics.response")
 
     /// The caller owns the observer and removes it when the app shuts down.
     static func respond(report: @escaping () -> [String: Any]?) -> NSObjectProtocol {

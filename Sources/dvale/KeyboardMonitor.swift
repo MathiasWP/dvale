@@ -1,6 +1,6 @@
 import AppKit
 import Carbon
-import StillBarCore
+import DvaleCore
 
 final class KeyboardMonitor {
     private var tap: CFMachPort?

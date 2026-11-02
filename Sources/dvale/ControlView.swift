@@ -44,7 +44,7 @@ struct ControlView: View {
                 .frame(width: 48, height: 48)
                 .background(accent.opacity(0.09), in: RoundedRectangle(cornerRadius: 14))
             VStack(alignment: .leading, spacing: 3) {
-                Text("StillBar").font(.system(size: 24, weight: .semibold))
+                Text("dvale").font(.system(size: 24, weight: .semibold))
                 Text("A quieter Touch Bar.").foregroundStyle(.secondary)
             }
             Spacer()
@@ -57,7 +57,7 @@ struct ControlView: View {
             VStack(spacing: 5) {
                 Text(!model.available ? "Let’s find your Touch Bar" : model.keepOff ? "Let it rest." : "Quiet is a double-tap away.")
                     .font(.system(size: 21, weight: .medium))
-                Text(model.keepOff ? "StillBar requests sleep and reapplies it after wake." : "Turn it off here, or tap Command twice.")
+                Text(model.keepOff ? "dvale requests sleep and reapplies it after wake." : "Turn it off here, or tap Command twice.")
                     .font(.system(size: 12)).foregroundStyle(.secondary)
             }
             Button(action: model.toggle) {

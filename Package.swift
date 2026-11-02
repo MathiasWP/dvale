@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "StillBar",
+    name: "dvale",
     platforms: [.macOS(.v13)],
-    products: [.executable(name: "StillBar", targets: ["StillBar"])],
+    products: [.executable(name: "dvale", targets: ["dvale"])],
     targets: [
-        .target(name: "StillBarCore"),
-        .executableTarget(name: "StillBar", dependencies: ["StillBarCore"]),
-        .testTarget(name: "StillBarCoreTests", dependencies: ["StillBarCore"])
+        .target(name: "DvaleCore"),
+        .executableTarget(name: "dvale", dependencies: ["DvaleCore"]),
+        .testTarget(name: "DvaleCoreTests", dependencies: ["DvaleCore"])
     ]
 )

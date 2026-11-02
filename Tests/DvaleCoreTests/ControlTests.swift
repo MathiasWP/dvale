@@ -1,6 +1,6 @@
 import XCTest
 import CoreGraphics
-@testable import StillBarCore
+@testable import DvaleCore
 
 final class CommandGestureTests: XCTestCase {
     func testTwoCompleteTapsToggleOnlyOnSecondRelease() {

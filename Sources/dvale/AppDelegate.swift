@@ -27,7 +27,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(.separator())
         toggleItem.target = self
         menu.addItem(toggleItem)
-        let settings = NSMenuItem(title: "Open StillBar…", action: #selector(showWindow), keyEquivalent: ",")
+        let settings = NSMenuItem(title: "Open dvale…", action: #selector(showWindow), keyEquivalent: ",")
         settings.target = self
         menu.addItem(settings)
         menu.addItem(.separator())
@@ -56,9 +56,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func menuWillOpen(_ menu: NSMenu) { model.refresh() }
 
     private func updateMenu() {
-        statusItem.button?.image = NSImage(systemSymbolName: model.keepOff ? "moon.zzz.fill" : "moon", accessibilityDescription: "StillBar")
+        statusItem.button?.image = NSImage(systemSymbolName: model.keepOff ? "moon.zzz.fill" : "moon", accessibilityDescription: "dvale")
         statusItem.button?.image?.isTemplate = true
-        statusItem.button?.toolTip = model.keepOff ? "StillBar · Keep Off enabled" : "StillBar · macOS control"
+        statusItem.button?.toolTip = model.keepOff ? "dvale · Keep Off enabled" : "dvale · macOS control"
         toggleItem.title = model.keepOff ? "Turn Touch Bar On" : "Turn Touch Bar Off"
         toggleItem.isEnabled = model.available
         stateItem.title = !model.available ? "Touch Bar unavailable" : model.reportsDark ? "macOS reports display asleep" : "macOS reports display awake"
@@ -72,7 +72,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             let size = view.fittingSize
             let window = NSWindow(contentRect: NSRect(origin: .zero, size: size),
                                   styleMask: [.titled, .closable, .miniaturizable], backing: .buffered, defer: false)
-            window.title = "StillBar"
+            window.title = "dvale"
             window.isReleasedWhenClosed = false
             window.contentView = view
             window.center()

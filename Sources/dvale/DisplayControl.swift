@@ -30,7 +30,7 @@ final class DisplayControl {
         // Check signatures before calling through a C function pointer.
         guard Self.validMethod(cls, selector: offSelector, arguments: 3, parameter: "f"),
               Self.validMethod(cls, selector: onSelector, arguments: 2, parameter: nil) else {
-            throw DisplayError.unavailable("The Touch Bar API has changed. StillBar cannot safely use it.")
+            throw DisplayError.unavailable("The Touch Bar API has changed. dvale cannot safely use it.")
         }
         clientClass = cls
         statusFunction = unsafeBitCast(status, to: (@convention(c) () -> UInt32).self)
